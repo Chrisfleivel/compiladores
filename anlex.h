@@ -7,49 +7,22 @@
 /************* Definiciones ********************/
 
 //Codigos
-#define PROGRAM		256
-#define TYPE		257
-#define VAR			258
-#define ARRAY		259
-#define BEGIN		260
-#define END			261
-#define PR_DO		262
-#define TO			263
-#define DOWNTO		264
-#define THEN		265
-#define OF			266
-#define FUNCTION	267
-#define PROCEDURE	268
-#define PR_INTEGER	269
-#define PR_REAL		270
-#define PR_BOOLEAN	271
-#define PR_CHAR		272
-#define PR_FOR		273
-#define PR_IF		274
-#define PR_ELSE		275
-#define PR_WHILE	276
-#define REPEAT		277
-#define UNTIL		278
-#define PR_CASE		279
-#define RECORD		280
-#define WRITELN		281
-#define WRITE		282
-#define CONST		283
-#define NUM			284
-#define ID			285
-#define BOOL		286
-#define CAR			287
-#define LITERAL		288
-#define NOT			289
-#define OPREL		290
-#define OPSUMA		291
-#define OPMULT		292
-#define OPASIGNA	293
-#define USER_TYPE	294
+
+#define E_NULL			256
+#define LITERAL_NUM		257
+//STRING
+#define LITERAL_CADENA	258 
+#define BOOL			259
+#define OPASIGNA		260
+//#define E_ARRAY			261
+//#define E_OBJECT			262
+
 // Fin Codigos
 #define TAMBUFF 	5
 #define TAMLEX 		50
 #define TAMHASH 	101
+#define TAMNOMBRE 	20
+
 
 /************* Estructuras ********************/
 
@@ -65,6 +38,7 @@ typedef struct entrada{
 typedef struct {
 	int compLex;
 	entrada *pe;
+	char nombre[TAMNOMBRE];
 } token;
 
 /************* Prototipos ********************/
